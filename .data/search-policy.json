@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "東京お笑いLIVE Search Agent",
+  "scope": {"region":"東京","lookahead_days":30},
+  "exclude": ["下北GRIP","下北GRIP DASH","下北GRIP DASH火曜","下北GRIP月曜"],
+  "source_priority": ["公式サイト","会場公式","公式チケット","公式SNS","信頼できるライブ情報DB","検索結果"],
+  "search_strategy": ["日付×地域×お笑いライブ","会場名×お笑い","芸人名×ライブ","チケット販売×お笑い","公式SNSで開催確認"],
+  "normalization": {"date":"YYYY-MM-DD","time":"HH:mm","area":"駅/区/市の正規化"},
+  "dedupe_keys":["date","venue","title","start_at"],
+  "confidence": {"confirmed":"公式情報で開催日時を確認","candidate":"検索結果のみで未確認","cancelled":"中止・延期を公式情報で確認"},
+  "agent_rule":"候補を広く拾い、開催確認と除外判定を最後に行う。GRIP/DASHは候補段階から除外する。"
+}
