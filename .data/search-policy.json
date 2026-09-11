@@ -1,12 +1,24 @@
 {
-  "version": 1,
-  "name": "東京お笑いLIVE Search Agent",
+  "version": 2,
+  "name": "Tokyo Performance Search Agent",
   "scope": {"region":"東京","lookahead_days":30},
-  "exclude": ["下北GRIP","下北GRIP DASH","下北GRIP DASH火曜","下北GRIP月曜"],
+  "domains": ["comedian","rakugo","idol","dj","theatre"],
+  "seed_hubs": ["下北GRIP","下北GRIP DASH","下北沢ZAWAZAWA","シアターミネルヴァ","本多劇場","ザ・スズナリ","下北沢ろくでもない夜"],
   "source_priority": ["公式サイト","会場公式","公式チケット","公式SNS","信頼できるライブ情報DB","検索結果"],
-  "search_strategy": ["日付×地域×お笑いライブ","会場名×お笑い","芸人名×ライブ","チケット販売×お笑い","公式SNSで開催確認"],
+  "search_strategy": [
+    "ハブ会場×ジャンル",
+    "イベント×出演者",
+    "出演者×ライブ",
+    "出演者×落語会",
+    "出演者×アイドルイベント",
+    "出演者×DJイベント",
+    "出演者×演劇",
+    "会場×イベント",
+    "チケット販売×出演者"
+  ],
   "normalization": {"date":"YYYY-MM-DD","time":"HH:mm","area":"駅/区/市の正規化"},
   "dedupe_keys":["date","venue","title","start_at"],
+  "person_types": {"comedian":"芸人","rakugo":"落語家","idol":"アイドル","dj":"DJ","theatre":"演劇"},
   "confidence": {"confirmed":"公式情報で開催日時を確認","candidate":"検索結果のみで未確認","cancelled":"中止・延期を公式情報で確認"},
-  "agent_rule":"候補を広く拾い、開催確認と除外判定を最後に行う。GRIP/DASHは候補段階から除外する。"
+  "agent_rule":"候補を広く拾い、人物・会場・主催者を新しい探索ノードとして登録する。GRIP/DASHは重要なSeedであり除外しない。"
 }
