@@ -1,0 +1,27 @@
+name: Comedy Search Agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 0 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  explore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Explore from hubs
+        run: python scripts/search_agent.py
+      - name: Commit agent memory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .data/agent-memory.jsonl
+          git diff --cached --quiet || git commit -m 'chore: update search agent memory'
+          git push
