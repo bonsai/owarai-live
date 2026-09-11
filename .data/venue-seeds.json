@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "seed_type": "venue",
+  "venues": [
+    {
+      "id": "shimokitazawa-grip",
+      "name": "下北GRIP",
+      "aliases": ["下北沢GRIP", "GRIP"],
+      "type": "comedy",
+      "area": "下北沢",
+      "address": "東京都世田谷区北沢2-9-20 力十ビルB1",
+      "source_url": "https://www.shimokitagrip2020.com/",
+      "seed": true,
+      "note": "若手芸人の無料ライブ。DASHと姉妹ライブ。"
+    },
+    {
+      "id": "nagatani-fu",
+      "name": "永谷 FU",
+      "aliases": ["永谷フー", "FU"],
+      "type": "performance",
+      "area": "東京",
+      "seed": true,
+      "note": "演芸・お笑い探索ハブ。公式情報で所在地・名称を要確認。"
+    },
+    {
+      "id": "shinjuku-suehiro-tei",
+      "name": "新宿末広亭",
+      "aliases": ["末広亭", "新宿末廣亭"],
+      "type": "rakugo",
+      "area": "新宿",
+      "address": "東京都新宿区新宿3-6-12",
+      "seed": true,
+      "source_url": "https://www.geikyo.com/",
+      "note": "落語・寄席の主要探索ハブ。"
+    },
+    {
+      "id": "kokuritsu-engei-jo",
+      "name": "国立演芸場",
+      "aliases": ["国立演芸場寄席", "花形演芸会"],
+      "type": "rakugo",
+      "area": "東京",
+      "seed": true,
+      "source_url": "https://www.ntj.jac.go.jp/engei/",
+      "note": "初代国立演芸場は再整備のため閉場。現在は他劇場で主催公演を継続。"
+    }
+  ]
+}
