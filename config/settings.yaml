@@ -1,0 +1,34 @@
+project:
+  name: owarai-musen-discovery
+  timezone: Asia/Tokyo
+  year: 2026
+
+discovery:
+  max_queries: 300
+  max_events_per_run: 500
+  min_free_score: 5
+  include_unverified: true
+  include_grip_dash: true
+
+scoring:
+  new_event: 10
+  free_event: 5
+  under_500: 4
+  under_1000: 2
+  verified_source: 3
+  source_url: 2
+  free_keyword: 3
+
+sources:
+  - name: TIGET
+    url: https://tiget.net/
+  - name: FANY
+    url: https://ticket.fany.lol/
+  - name: カンフェティ
+    url: https://www.confetti-web.com/
+  - name: はしご
+    url: https://hashigo-live.com/
+  - name: 下北GRIP
+    url: https://www.shimokitagrip2020.com/
+  - name: 下北GRIP DASH
+    url: https://www.shimokita-dash.com/
