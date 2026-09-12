@@ -10,9 +10,11 @@
 - `src/memory.py` — Discovery Score と探索履歴
 - `src/graph.py` — 芸人・会場・ライブの発見グラフ
 - `src/search_engine.py` — 検索クエリ生成レイヤー
+- `src/web_discovery.py` — 実Web検索と候補証拠の保存
 - `src/discovery_agent.py` — Discover → Score → Expand → Remember のオーケストレータ
 - `config/settings.yaml` — 探索上限・スコア重み・情報源
 - `.data/events.json` — 現在のライブデータ
+- `.data/web-candidates.json` — Web検索で得た未検証候補
 - `.data/agent-memory.jsonl` — 実行時メモリ（Git管理外）
 
 ## Discovery Loop
@@ -20,7 +22,7 @@
 ```text
 Seed
  ↓
-Discover
+Discover（実Web検索）
  ↓
 Score
  ↓
@@ -47,10 +49,11 @@ python -m venv .venv
 # Windows PowerShell
 .venv\\Scripts\\Activate.ps1
 pip install -r requirements.txt
-python -m src.discovery_agent
+python -m src.web_discovery
+python scripts/search_agent.py
 ```
 
-現在のプロトタイプは検索クエリ生成・スコアリング・メモリ・グラフまで。外部Web検索は `src/search_engine.py` の境界に切り出しているため、TIGET等の取得器を後から追加できる。
+`src.web_discovery` はAPIキー不要のWeb検索から候補URLを収集し、`.data/web-candidates.json` に証拠として保存する。検索結果だけではイベントを「確認済み」に昇格させず、公式チケット・公式サイト等で再確認する。
 
 ## Sources
 
