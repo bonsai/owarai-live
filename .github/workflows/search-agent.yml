@@ -16,12 +16,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Explore from hubs
+      - name: Install core dependencies
+        run: pip install -r requirements.txt
+      - name: Search the web
+        run: python -m src.web_discovery
+      - name: Rank discovery paths
         run: python scripts/search_agent.py
-      - name: Commit agent memory
+      - name: Commit discovery evidence
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .data/agent-memory.jsonl
-          git diff --cached --quiet || git commit -m 'chore: update search agent memory'
+          git add .data/web-candidates.json .data/agent-memory.jsonl
+          git diff --cached --quiet || git commit -m 'chore: update discovery evidence'
           git push
