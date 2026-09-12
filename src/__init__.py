@@ -1,0 +1,1 @@
+"""OWARAI MUSEN discovery core."""
