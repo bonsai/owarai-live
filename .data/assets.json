@@ -1,0 +1,36 @@
+[
+  {
+    "id": "provider:tiget",
+    "type": "provider",
+    "name": "TIGET",
+    "url": "https://tiget.net/",
+    "capabilities": ["event_search", "ticket_purchase", "ticket_reservation", "event_detail"],
+    "genres": ["お笑い", "寄席", "音楽", "アイドル", "演劇", "トークショー"],
+    "role": "discovery_provider",
+    "confidence": "official"
+  },
+  {
+    "id": "provider:fany",
+    "type": "provider",
+    "name": "FANY",
+    "url": "https://ticket.fany.lol/",
+    "capabilities": ["event_search", "ticket_purchase"],
+    "role": "discovery_provider"
+  },
+  {
+    "id": "provider:confetti",
+    "type": "provider",
+    "name": "カンフェティ",
+    "url": "https://www.confetti-web.com/",
+    "capabilities": ["event_search", "ticket_purchase"],
+    "role": "discovery_provider"
+  },
+  {
+    "id": "venue:suehirotei",
+    "type": "venue",
+    "name": "新宿末廣亭",
+    "url": "https://suehirotei.com/",
+    "genres": ["寄席", "落語", "講談", "浪曲"],
+    "role": "discovery_hub"
+  }
+]
