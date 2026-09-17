@@ -24,5 +24,45 @@
     "source_type": "TIGET",
     "confidence": "confirmed",
     "source_url": "https://tiget.net/"
+  },
+  {
+    "id": "2026-09-17-cop-1",
+    "date": "2026-09-17",
+    "title": "中央大学お笑いサークルCOP 9月定期ライブ【夏はおわらナイン!】1部",
+    "venue": "サンガイノリバティ",
+    "area": "下北沢",
+    "open_at": "11:45",
+    "start_at": "12:00",
+    "price": "無料",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "source_url": "https://tiget.net/events/516963"
+  },
+  {
+    "id": "2026-09-17-cop-2",
+    "date": "2026-09-17",
+    "title": "中央大学お笑いサークルCOP 9月定期ライブ 2部",
+    "venue": "サンガイノリバティ",
+    "area": "下北沢",
+    "open_at": "15:15",
+    "start_at": "15:30",
+    "price": "無料",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "source_url": "https://tiget.net/events/516965"
+  },
+  {
+    "id": "2026-09-17-poweroffree-vol10050",
+    "date": "2026-09-17",
+    "title": "無料ライブ パワーオブフリー(Ｓ) vol.千50",
+    "venue": "なかの芸能小劇場",
+    "area": "中野",
+    "open_at": "14:55",
+    "start_at": "15:00",
+    "price": "無料",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "note": "3分ショートネタライブ。無料だが事前予約必須。U&Cエンタプライズ主催。",
+    "source_url": "https://tiget.net/events/515487"
   }
 ]

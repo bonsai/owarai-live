@@ -29,8 +29,9 @@ for (const e of weekly) {
 }
 
 const priceValue = e => {
-  const text = String(e.price || '').replace(/,/g, '')
+  const text = String(e.price ?? '').replace(/,/g, '').trim()
   if (/無料|0円|フリー/i.test(text)) return 0
+  if (/^[0-9]+$/.test(text)) return Number(text)
   const values = [...text.matchAll(/[0-9]+円/g)].map(m => Number(m[0].replace(/[^0-9]/g, '')))
   if (!values.length) return null
   return Math.max(...values)

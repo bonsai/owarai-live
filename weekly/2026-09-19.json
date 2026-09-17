@@ -37,6 +37,30 @@
     "open": "13:35",
     "start": "13:45",
     "price": 500,
-    "source": "https://tiget.net/"
+    "source": "https://tiget.net/events/518660"
+  },
+  {
+    "id": "2026-09-19-ginza-free-market",
+    "date": "2026-09-19",
+    "title": "お笑いフリーマーケット",
+    "venue": "銀座お笑いPLACE",
+    "area": "銀座",
+    "open": "15:45",
+    "start": "16:00",
+    "price": 0,
+    "note": "フリーカンパ制。事務所未所属のフリー芸人のみ出演。",
+    "source": "https://tiget.net/events/511125"
+  },
+  {
+    "id": "2026-09-19-ginza-mitsukarimachi",
+    "date": "2026-09-19",
+    "title": "見つかりまち芸人バラエティ",
+    "venue": "銀座お笑いPLACE",
+    "area": "銀座",
+    "open": "19:15",
+    "start": "19:30",
+    "price": 0,
+    "note": "フリーカンパ制。",
+    "source": "https://tiget.net/events/511134"
   }
 ]

@@ -93,5 +93,9 @@ def run(events: list[dict], max_queries: int = 32) -> list[dict]:
 if __name__ == "__main__":
     events_path = DATA / "events.json"
     events = json.loads(events_path.read_text(encoding="utf-8")) if events_path.exists() else []
+    if isinstance(events, dict) and isinstance(events.get("content"), str):
+        events = json.loads(events["content"])
+    if not isinstance(events, list):
+        events = []
     results = run(events)
     print(json.dumps({"queries": len(build_queries(events)), "results": len(results)}, ensure_ascii=False))

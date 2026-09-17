@@ -8,5 +8,17 @@
     "start": "12:00",
     "price": 500,
     "source": "https://tiget.net/events/518662"
+  },
+  {
+    "id": "2026-09-20-poweroffree-vol10051",
+    "date": "2026-09-20",
+    "title": "無料ライブ パワーオブフリー(Ｓ) vol.千51",
+    "venue": "新宿ハイジアV-1",
+    "area": "新宿",
+    "open": "12:40",
+    "start": "12:45",
+    "price": 0,
+    "note": "3分ショートネタライブ。無料だが事前予約必須。U&Cエンタプライズ主催。",
+    "source": "https://tiget.net/events/520045"
   }
 ]
