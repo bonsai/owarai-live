@@ -1,20 +1,28 @@
 [
   {
+    "id": "2026-09-17-rags-to-riches-923",
     "date": "2026-09-17",
     "title": "お笑いライブ💰RAGS TO RICHES.vol.923💰",
     "venue": "新宿ブリーカー",
-    "open": "15:50",
-    "start": "16:00",
-    "price": 500,
-    "source": "https://tiget.net/"
+    "area": "新宿",
+    "open_at": "15:50",
+    "start_at": "16:00",
+    "price": "500円",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "source_url": "https://tiget.net/"
   },
   {
+    "id": "2026-09-17-zansho-kun",
     "date": "2026-09-17",
     "title": "笑論法×寄席研×木曜会1,2年同期対決ライブ『残暑くん』",
     "venue": "高円寺ジュンジョー",
-    "open": "13:45",
-    "start": "14:00",
-    "price": 0,
-    "source": "https://tiget.net/"
+    "area": "高円寺",
+    "open_at": "13:45",
+    "start_at": "14:00",
+    "price": "無料",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "source_url": "https://tiget.net/"
   }
 ]
