@@ -18,5 +18,15 @@
     "start": "19:00",
     "price": 0,
     "source": "https://tiget.net/events/521838"
+  },
+  {
+    "id": "shimokitagrip-weekly",
+    "date": "2026-09-18",
+    "title": "下北GRIP",
+    "venue": "下北沢",
+    "open": "",
+    "start": "",
+    "price": 0,
+    "source": "https://shimokita-grip.stores.jp/"
   }
 ]
