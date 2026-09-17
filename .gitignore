@@ -4,3 +4,5 @@ __pycache__/
 *.py[cod]
 .data/agent-memory.jsonl
 .data/graph.json
+node_modules/
+dist/
