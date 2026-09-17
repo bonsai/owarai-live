@@ -1,11 +1,15 @@
 [
   {
+    "id": "2026-09-14-n-2-3-minutes",
     "date": "2026-09-14",
     "title": "N 2, 3 minutes",
     "venue": "新宿ブリーカー",
-    "open": "13:50",
-    "start": "14:00",
-    "price": 500,
-    "source": "https://tiget.net/events/514336"
+    "area": "新宿",
+    "open_at": "13:50",
+    "start_at": "14:00",
+    "price": "500円",
+    "source_type": "TIGET",
+    "confidence": "confirmed",
+    "source_url": "https://tiget.net/events/514336"
   }
 ]
