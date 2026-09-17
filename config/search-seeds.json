@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "purpose": "Discovery seeds. Existing historical DB is preserved and referenced as a seed source; it is never deleted or overwritten by discovery.",
+  "legacy_db": {
+    "path": ".data/events.json",
+    "role": "seed",
+    "preserve": true
+  },
+  "event_hubs": [
+    {
+      "kind": "event_hub",
+      "name": "下北GRIP",
+      "url": "https://www.shimokitagrip2020.com/"
+    },
+    {
+      "kind": "event_hub",
+      "name": "下北GRIP DASH",
+      "url": "https://www.shimokita-dash.com/"
+    },
+    {
+      "kind": "venue",
+      "name": "新宿末廣亭",
+      "url": "https://suehirotei.com/"
+    }
+  ],
+  "genres": [
+    "お笑い",
+    "寄席",
+    "落語",
+    "講談",
+    "浪曲"
+  ],
+  "price_targets": [
+    "無料",
+    "500円以下",
+    "1000円以下"
+  ],
+  "query_templates": [
+    "{genre} 無料 ライブ 2026",
+    "{genre} 500円 ライブ 2026",
+    "{genre} 1000円以下 ライブ 2026",
+    "{genre} 若手 勉強会 2026",
+    "{genre} 無料 東京 2026",
+    "{genre} TIGET 2026",
+    "{venue} {genre} 2026",
+    "{venue} 早朝寄席 2026",
+    "{venue} 深夜寄席 2026"
+  ]
+}
