@@ -2,6 +2,13 @@
 import { computed, ref } from 'vue'
 import rawEvents from '../.data/events.json'
 
+// Weekly event files are additive overlays. Drop a YYYY-MM-DD.json into weekly/
+// and Vite includes it automatically at build time.
+const weeklyModules = import.meta.glob('../weekly/*.json', {
+  eager: true,
+  import: 'default'
+})
+
 const unwrapEvents = (value) => {
   let current = value
   for (let i = 0; i < 4; i += 1) {
@@ -14,6 +21,26 @@ const unwrapEvents = (value) => {
   return Array.isArray(current) ? current : []
 }
 
+const normalizeEvent = (e) => ({
+  ...e,
+  start_at: e.start_at || e.start || '',
+  source_url: e.source_url || e.source || '',
+  price: e.price ?? ''
+})
+
+const baseEvents = unwrapEvents(rawEvents).map(normalizeEvent)
+const weeklyEvents = Object.values(weeklyModules)
+  .flatMap(unwrapEvents)
+  .map(normalizeEvent)
+
+// Weekly data wins on duplicate IDs; existing events.json remains the base dataset.
+const eventsById = new Map(baseEvents.map(e => [e.id || `${e.date}-${e.title}-${e.venue}`, e]))
+for (const event of weeklyEvents) {
+  const id = event.id || `${event.date}-${event.title}-${event.venue}`
+  eventsById.set(id, { ...event, id })
+}
+const allEvents = [...eventsById.values()]
+
 // OWARAI MUSEN: only explicitly free or exactly <=500 yen is eligible.
 // Never use the cheapest tier when a price string contains a higher ticket price.
 const priceValue = (e) => {
@@ -25,12 +52,12 @@ const priceValue = (e) => {
   return Math.max(...values)
 }
 
-const events = unwrapEvents(rawEvents).filter(e => {
+const events = allEvents.filter(e => {
   const price = priceValue(e)
   return price !== null && price <= 500
 })
 
-const today = '2026-09-12'
+const today = '2026-09-17'
 const from = ref(today)
 const to = ref('2026-09-20')
 const area = ref('')
@@ -39,7 +66,7 @@ const freeOnly = ref(false)
 const genre = ref('')
 const genres = ['漫才・コント', 'スタンダップコメディ', '寄席', '落語', '講談', '浪曲']
 const areas = computed(() => [...new Set(events.map(e => e.area).filter(Boolean))].sort())
-const performers = computed(() => [...new Set(events.flatMap(e => e.artists || []).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ja')).slice(0,80))
+const performers = computed(() => [...new Set(events.flatMap(e => e.artists || []).filter(Boolean)).sort((a,b)=>a.localeCompare(b,'ja')).slice(0,80))
 
 const matchesGenre = (e) => {
   if (!genre.value) return true
