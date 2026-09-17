@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 """OWARAI MUSEN discovery agent.
 
-Discover -> score -> expand -> remember.
-The agent learns which query patterns produce new events and prioritizes
-high-yield paths on later runs.
+Discover -> score -> expand -> normalize -> dedupe -> verify -> remember.
+The historical event DB is preserved and used as a discovery seed.
 """
 from __future__ import annotations
 
 import hashlib
 import json
 import re
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -18,20 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / ".data"
 EVENTS = DATA / "events.json"
 MEMORY = DATA / "agent-memory.jsonl"
-
-SEEDS = [
-    {"kind": "event_hub", "name": "下北GRIP", "url": "https://www.shimokitagrip2020.com/"},
-    {"kind": "event_hub", "name": "下北GRIP DASH", "url": "https://www.shimokita-dash.com/"},
-]
-
-QUERY_PATTERNS = [
-    ("performer", "{performer} お笑い ライブ 2026"),
-    ("performer", "{performer} 無料 お笑い ライブ 2026"),
-    ("performer", "{performer} 出演 ライブ 2026"),
-    ("venue", "{venue} お笑い ライブ 2026"),
-    ("venue", "{venue} 無料 お笑い ライブ 2026"),
-    ("venue", "{venue} TIGET お笑い"),
-]
+CONFIG = ROOT / "config" / "search-seeds.json"
 
 
 def now():
@@ -70,31 +55,44 @@ def save_memory(record):
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
+def build_queries(events, config):
+    performers = sorted({a for e in events for a in e.get("artists", []) if a})
+    venues = sorted({e.get("venue") for e in events if e.get("venue")})
+    genres = config.get("genres", [])
+    templates = config.get("query_templates", [])
+    queries = []
+
+    for template in templates:
+        for genre in genres:
+            for venue in venues[:100]:
+                queries.append({"kind": "genre_venue", "query": template.format(genre=genre, venue=venue)})
+        for performer in performers[:100]:
+            queries.append({"kind": "performer", "query": template.format(genre="お笑い", venue=performer)})
+        for hub in config.get("event_hubs", []):
+            queries.append({"kind": "hub", "query": template.format(genre="講談・浪曲", venue=hub["name"])})
+    return queries
+
+
 def discovery_score(query, events, previous_events):
     current = {event_key(e) for e in events}
     previous = {event_key(e) for e in previous_events}
     new_count = len(current - previous)
-    free_count = sum(1 for e in events if norm(e.get("price")) in {"0円", "無料"})
+    free_count = sum(1 for e in events if norm(e.get("price")) in {"0円", "無料", "0"})
     score = new_count * 10 + free_count * 5
     if "無料" in query:
         score += 3
+    if any(term in query for term in ("講談", "浪曲")):
+        score += 5
     return score, new_count, free_count
 
 
 def main():
     events = load_events()
     history = load_memory()
+    config = json.loads(CONFIG.read_text(encoding="utf-8")) if CONFIG.exists() else {}
     previous_snapshot = history[-1].get("events", []) if history else []
 
-    performers = sorted({a for e in events for a in e.get("artists", []) if a})
-    venues = sorted({e.get("venue") for e in events if e.get("venue")})
-
-    queries = []
-    for kind, template in QUERY_PATTERNS:
-        values = performers if kind == "performer" else venues
-        for value in values:
-            queries.append({"kind": kind, "query": template.format(**{kind: value})})
-
+    queries = build_queries(events, config)
     ranked = []
     for item in queries:
         score, new_count, free_count = discovery_score(item["query"], events, previous_snapshot)
@@ -103,26 +101,14 @@ def main():
 
     memory = {
         "timestamp": now(),
-        "seeds": SEEDS,
-        "discovery": {
-            "performer_count": len(performers),
-            "venue_count": len(venues),
-            "generated_queries": len(queries),
-            "ranked_queries": ranked[:300],
-        },
+        "seed": {"path": str(EVENTS.relative_to(ROOT)), "preserve": True},
+        "discovery": {"generated_queries": len(queries), "ranked_queries": ranked[:300]},
         "events": events,
-        "rule": "discover -> score -> expand -> normalize -> dedupe -> verify -> remember -> prioritize",
+        "rule": "historical-db -> seed -> discover -> score -> expand -> normalize -> dedupe -> verify -> remember -> prioritize",
     }
     save_memory(memory)
 
-    print(json.dumps({
-        "ok": True,
-        "events": len(events),
-        "performers": len(performers),
-        "venues": len(venues),
-        "queries": len(queries),
-        "top_queries": ranked[:10],
-    }, ensure_ascii=False, indent=2))
+    print(json.dumps({"ok": True, "events": len(events), "queries": len(queries), "top_queries": ranked[:10]}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
