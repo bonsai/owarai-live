@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "mode": "semantic",
+  "intent": "低価格のお笑い・寄席・落語・講談・浪曲イベントを発見し、イベント周辺の資産を構造化する",
+  "entities": [
+    "event",
+    "provider",
+    "venue",
+    "organizer",
+    "performer",
+    "genre",
+    "ticket",
+    "source"
+  ],
+  "relations": [
+    "provider_lists_event",
+    "event_at_venue",
+    "organizer_presents_event",
+    "performer_appears_event",
+    "event_has_genre",
+    "event_has_ticket",
+    "event_verified_by_source"
+  ],
+  "search_intents": [
+    "無料のお笑いライブ",
+    "500円以下のお笑いライブ",
+    "安い寄席",
+    "無料の落語",
+    "安い講談",
+    "安い浪曲",
+    "早朝寄席",
+    "深夜寄席"
+  ],
+  "provider_priority": [
+    "TIGET",
+    "FANY",
+    "カンフェティ",
+    "公式劇場",
+    "公式主催者"
+  ],
+  "preserve_seed": true,
+  "historical_seed": ".data/events.json"
+}
