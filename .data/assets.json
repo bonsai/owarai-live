@@ -32,5 +32,78 @@
     "url": "https://suehirotei.com/",
     "genres": ["寄席", "落語", "講談", "浪曲"],
     "role": "discovery_hub"
+  },
+  {
+    "id": "venue:makuhari-messe:international-exhibition-halls-7-8",
+    "type": "venue",
+    "name": "幕張メッセ 国際展示場 7-8ホール",
+    "aliases": ["幕張メッセ 7-8ホール", "Makuhari Messe International Exhibition Halls 7-8"],
+    "location": {
+      "prefecture": "千葉県",
+      "city": "千葉市美浜区",
+      "venue_complex": "幕張メッセ"
+    },
+    "venue_complex_id": "venue_complex:makuhari-messe",
+    "hall_ids": ["hall:makuhari-messe:7", "hall:makuhari-messe:8"],
+    "scale": "large",
+    "facility_type": "convention_exhibition_center",
+    "genres": ["アイドル", "音楽", "フェス", "大型イベント"],
+    "role": "large_event_venue",
+    "source": {
+      "provider_id": "provider:tiget",
+      "source_url": "https://tiget.net/events/522619",
+      "source_event_id": "522619",
+      "event_name": "GIGA•GIGA SONIC",
+      "observed_at": "2026-09-17"
+    },
+    "relations": [
+      {
+        "type": "part_of",
+        "target": "venue_complex:makuhari-messe"
+      },
+      {
+        "type": "hosts",
+        "target": "event:giga-giga-sonic:2026-10-17"
+      }
+    ],
+    "confidence": "official_source"
+  },
+  {
+    "id": "venue_complex:makuhari-messe",
+    "type": "venue_complex",
+    "name": "幕張メッセ",
+    "location": {
+      "prefecture": "千葉県",
+      "city": "千葉市美浜区"
+    },
+    "role": "large_event_venue_complex"
+  },
+  {
+    "id": "event:giga-giga-sonic:2026-10-17",
+    "type": "event",
+    "name": "GIGA•GIGA SONIC",
+    "date": "2026-10-17",
+    "open_time": "10:30",
+    "start_time": "11:30",
+    "venue_id": "venue:makuhari-messe:international-exhibition-halls-7-8",
+    "provider_id": "provider:tiget",
+    "organizer": "株式会社GALDir Media",
+    "source_url": "https://tiget.net/events/522619",
+    "genre": ["アイドル", "音楽", "フェス"],
+    "ticket_prices": [3900, 9800, 22000],
+    "currency": "JPY",
+    "relations": [
+      {"type": "held_at", "target": "venue:makuhari-messe:international-exhibition-halls-7-8"},
+      {"type": "sold_by", "target": "provider:tiget"},
+      {"type": "organized_by", "target": "org:galdir-media"}
+    ],
+    "confidence": "official_source"
+  },
+  {
+    "id": "org:galdir-media",
+    "type": "organizer",
+    "name": "株式会社GALDir Media",
+    "source_url": "https://tiget.net/users/1530944/event_calendar",
+    "role": "event_organizer"
   }
 ]
