@@ -1,8 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue'
-import rawEvents from '../.data/events.json'
+import rawEvents from '../data/events.json'
 
-const weeklyModules = import.meta.glob('../weekly/*.json', { eager: true, import: 'default' })
+const weeklyModules = import.meta.glob('../data/data/weekly/*.json', { eager: true, import: 'default' })
 const unwrapEvents = (value) => {
   let current = value
   for (let i = 0; i < 4; i += 1) {
