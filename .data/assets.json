@@ -284,5 +284,213 @@
       }
     ],
     "confidence": "source_confirmed"
+  },
+  {
+    "id": "venue:x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1",
+    "type": "venue",
+    "name": "シアターミネルヴァ",
+    "aliases": [],
+    "attributes": {
+      "area": "下北沢"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/513536"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x65b0x5bbfx30d0x30c3x30b7x30e5x21x21",
+    "type": "venue",
+    "name": "新宿バッシュ!!",
+    "aliases": [],
+    "attributes": {
+      "area": "新宿"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/515484"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x4e0bx5317x6ca2x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1",
+    "type": "venue",
+    "name": "下北沢シアターミネルヴァ",
+    "aliases": [],
+    "attributes": {
+      "area": "下北沢"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://hashigo-live.com/live_event/?event_area=%E4%B8%8B%E5%8C%97%E6%B2%A2&event_date=2026-09-13"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x795ex4fddx753ax3088x3057x3082x3068x6f2bx624dx5287x5834",
+    "type": "venue",
+    "name": "神保町よしもと漫才劇場",
+    "aliases": [],
+    "attributes": {
+      "area": "神保町"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/artist/%E3%81%9D%E3%81%84%E3%81%A4%E3%81%A9%E3%81%84%E3%81%A4"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x65b0x5bbfx30d6x30eax30fcx30abx30fc",
+    "type": "venue",
+    "name": "新宿ブリーカー",
+    "aliases": [],
+    "attributes": {
+      "area": "新宿"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/518028"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x677fx6a4bx30b7x30a2x30bfx30fcx54b2",
+    "type": "venue",
+    "name": "板橋シアター咲",
+    "aliases": [],
+    "attributes": {
+      "area": "板橋"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/516440"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x306ax304bx306eZEROx20x672cx9928x5730x4e0b2x968ex20x8996x8074x899ax30dbx30fcx30e",
+    "type": "venue",
+    "name": "なかのZERO 本館地下2階 視聴覚ホール",
+    "aliases": [],
+    "attributes": {
+      "area": "中野"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/516815"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x306ax304bx306ex82b8x80fdx5c0fx5287x5834",
+    "type": "venue",
+    "name": "なかの芸能小劇場",
+    "aliases": [],
+    "attributes": {
+      "area": "中野"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/515486"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x6771x4eacx90fd",
+    "type": "venue",
+    "name": "東京都",
+    "aliases": [],
+    "attributes": {
+      "area": "東京"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x65b0x5bbf",
+    "type": "venue",
+    "name": "新宿",
+    "aliases": [],
+    "attributes": {
+      "area": "新宿"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x30ebx30dfx30cdthex3088x3057x3082x3068",
+    "type": "venue",
+    "name": "ルミネtheよしもと",
+    "aliases": [],
+    "attributes": {
+      "area": "新宿"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x4e0bx5317x6ca2x308dx304fx3067x3082x306ax3044x591c",
+    "type": "venue",
+    "name": "下北沢ろくでもない夜",
+    "aliases": [],
+    "attributes": {
+      "area": "下北沢"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://ticket.fany.lol/event/detail/19642"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "venue:x30b5x30f3x30acx30a4x30cex30eax30d0x30c6x30a3",
+    "type": "venue",
+    "name": "サンガイノリバティ",
+    "aliases": [],
+    "attributes": {
+      "area": "下北沢"
+    },
+    "relations": [],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/518658"
+      }
+    ],
+    "confidence": "candidate"
   }
 ]
