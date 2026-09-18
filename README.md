@@ -13,9 +13,9 @@
 - `src/web_discovery.py` — 実Web検索と候補証拠の保存
 - `src/discovery_agent.py` — Discover → Score → Expand → Remember のオーケストレータ
 - `config/settings.yaml` — 探索上限・スコア重み・情報源
-- `.data/events.json` — 現在のライブデータ
-- `.data/web-candidates.json` — Web検索で得た未検証候補
-- `.data/agent-memory.jsonl` — 実行時メモリ（Git管理外）
+- `data/events.json` — 現在のライブデータ
+- `data/web-candidates.json` — Web検索で得た未検証候補
+- `data/agent-memory.jsonl` — 実行時メモリ（Git管理外）
 
 ## Discovery Loop
 
@@ -53,7 +53,7 @@ python -m src.web_discovery
 python scripts/search_agent.py
 ```
 
-`src.web_discovery` はAPIキー不要のWeb検索から候補URLを収集し、`.data/web-candidates.json` に証拠として保存する。検索結果だけではイベントを「確認済み」に昇格させず、公式チケット・公式サイト等で再確認する。
+`src.web_discovery` はAPIキー不要のWeb検索から候補URLを収集し、`data/web-candidates.json` に証拠として保存する。検索結果だけではイベントを「確認済み」に昇格させず、公式チケット・公式サイト等で再確認する。
 
 ## Sources
 
