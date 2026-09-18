@@ -7,7 +7,7 @@
 
 | # | KPI | 定義・計測方法 | 現状<br>(2026-09-17) | 今週目標 | P5目標 | 備考 |
 |---|-----|----------------|----------------------|----------|--------|------|
-| 1 | 表示可能イベント数 (≤500円) | `events.json` + `weekly/*.json` を結合し、priceValue ≤500 かつ date 範囲内のユニーク件数 | **33** | 45 | **60+** | サイト最上部統計と一致させる |
+| 1 | 表示可能イベント数 (≤500円) | `events.json` + `data/weekly/*.json` を結合し、priceValue ≤500 かつ date 範囲内のユニーク件数 | **33** | 45 | **60+** | サイト最上部統計と一致させる |
 | 2 | Venue Asset 数 | `schema.json` 準拠の `type=venue` ノード数（venue-seeds/halls/domes 統合後） | **~10**（シード） | 20 | **50+** | 領域別カバレッジも目標化 |
 | 3 | イベントの Relation 接続率 | `held_at`（会場）または `sold_by`（provider）に接続する Event の割合 | **~0%** | 30% | **100%** | P2 関係配線で計測開始 |
 | 4 | 価格判明率 | price_yen（整数）が確定しているイベント / 全イベント | **~80%** (33/41) | 90% | **95%** | 価格不明は表示対象外とする |
@@ -17,7 +17,7 @@
 
 ## 計測方法
 
-- KPI 1・4・6: リポジトリ内ワンライナー/スクリプトで算出（`.data/events.json` + `weekly/*.json` を同じ `priceValue` ロジックで評価）
+- KPI 1・4・6: リポジトリ内ワンライナー/スクリプトで算出（`data/events.json` + `data/weekly/*.json` を同じ `priceValue` ロジックで評価）
 - KPI 5: `gh run list --workflow search-agent.yml --limit 7` の conclusion
 - KPI 2・3: P1/P2 実装後に `schema.json` 検証 + Relation エッジ集計
 
