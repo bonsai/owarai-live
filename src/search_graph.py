@@ -1,6 +1,6 @@
 """Discovery search graph.
 
-Historical events remain data, not disposable state. The existing .data/events.json
+Historical events remain data, not disposable state. The existing data/events.json
 is treated as a seed source. The graph expands from genres, price targets, venues,
 and event hubs into search queries, then feeds candidates back for verification.
 """
@@ -34,7 +34,7 @@ def build_search_graph() -> dict:
         nodes.setdefault(node_id, {"id": node_id, "kind": kind, "label": label})
 
     # Historical DB -> seed layer. Never mutate/delete the historical DB here.
-    node("seed:historical-events", "seed", ".data/events.json")
+    node("seed:historical-events", "seed", "data/events.json")
     for event in events:
         event_id = f"event:{event.get('id', '')}"
         if not event.get("id"):
