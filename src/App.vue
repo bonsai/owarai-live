@@ -37,6 +37,17 @@ const priceValue = e => {
   return Math.max(...values)
 }
 
+
+const videoEvent = computed(() => allEvents.find(e => e.id === '2026-09-19-shimokita-caravan'))
+const videoPerformers = computed(() => {
+  const e = videoEvent.value
+  if (!e) return []
+  return e.artists.map(name => ({
+    name,
+    url: e.video_search_urls?.[name] || `https://www.youtube.com/results?search_query=${encodeURIComponent(name + ' お笑い')}`
+  }))
+})
+
 const today = '2026-09-17'
 const allEvents = [...byId.values()]
 const events = allEvents.filter(e => priceValue(e) !== null && priceValue(e) <= 500)
@@ -125,6 +136,27 @@ const selectPeriod = days => {
     </div>
   </section>
 
+
+  <section v-if="videoPerformers.length" class="video-section">
+    <div class="result-head">
+      <div>
+        <h2>シモキタキャラバン — 動画</h2>
+        <p class="video-note">13組を動画で予習。検索結果を開いて、本人のネタ・トークを探せます。</p>
+      </div>
+      <a class="video-all" href="https://www.youtube.com/results?search_query=%E3%82%B7%E3%83%A2%E3%82%AD%E3%82%BF%E3%82%AD%E3%83%A3%E3%83%A9%E3%83%90%E3%83%B3+%E3%81%8A%E7%AC%91%E3%81%84" target="_blank" rel="noreferrer">全部検索 ↗</a>
+    </div>
+    <div class="video-grid">
+      <article v-for="(p, i) in videoPerformers" :key="p.name" class="video-card">
+        <div class="video-index">{{ String(i + 1).padStart(2, '0') }}</div>
+        <div>
+          <h3>{{ p.name }}</h3>
+          <p>ネタ・トーク動画を探す</p>
+        </div>
+        <a :href="p.url" target="_blank" rel="noreferrer">YouTube ↗</a>
+      </article>
+    </div>
+  </section>
+
   <footer>
     <p>データは各イベントの出典URLを優先して確認してください。販売状況・出演者・時間・料金は変更される場合があります。</p>
   </footer>
@@ -132,5 +164,5 @@ const selectPeriod = days => {
 </template>
 
 <style>
-:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#171717;background:#f7f7f5}*{box-sizing:border-box}body{margin:0}.container{max-width:820px;margin:auto;padding:22px 16px 70px}header{padding:18px 0 12px}.eyebrow{font-size:.72rem;letter-spacing:.14em;color:#777;font-weight:700}h1{font-size:2rem;line-height:1.1;margin:7px 0}.header p{margin:5px 0;color:#666}.stats{display:flex;gap:7px;margin-top:15px;flex-wrap:wrap}.stats span{background:#fff;border:1px solid #ddd;border-radius:999px;padding:5px 10px;font-size:.78rem}.periods,.days,.filters,.price-tabs{display:flex;gap:7px;align-items:center}.periods{padding:8px 0}.days{overflow:auto;padding:5px 0 14px}.periods button,.days button,.price-tabs button{border:1px solid #ccc;background:#fff;border-radius:8px;padding:8px 11px;white-space:nowrap;cursor:pointer}.periods button:hover,.days button:hover,.price-tabs button:hover,.active{background:#171717!important;color:#fff;border-color:#171717!important}.controls{background:#fff;border:1px solid #ddd;border-radius:12px;padding:12px;margin-bottom:15px}.controls input{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem}.filters{margin-top:9px;justify-content:space-between}.filters select{padding:9px;border:1px solid #ccc;border-radius:8px;max-width:55%}.price-tabs{overflow:auto}.price-tabs button{padding:7px 9px}.result-head{display:flex;justify-content:space-between;align-items:center}.result-head h2{font-size:1rem;margin:12px 0}.clear{border:0;background:none;text-decoration:underline;cursor:pointer;color:#666}.event{display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid #e0e0dc;border-radius:10px;padding:14px;margin:8px 0}.event time{font-size:.82rem;color:#666}.event h3{font-size:1rem;margin:0 0 5px}.event p{margin:0}.venue{color:#555;font-size:.88rem}.artists{color:#777;font-size:.8rem;margin:5px 0!important;line-height:1.45}.event strong{font-size:.85rem}.event a{color:#171717;text-decoration:none;border:1px solid #ccc;border-radius:7px;padding:7px 9px;white-space:nowrap}.empty{background:#fff;border:1px dashed #ccc;border-radius:10px;padding:30px;text-align:center;color:#666}.empty p{margin-bottom:0}footer{margin-top:30px;color:#888;font-size:.72rem;line-height:1.6}@media(max-width:600px){.event{grid-template-columns:65px 1fr}.event a{grid-column:2;width:max-content}.event time{font-size:.72rem}.filters{align-items:flex-start;flex-direction:column}.filters select{max-width:100%;width:100%}.price-tabs{width:100%}h1{font-size:1.7rem}}
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#171717;background:#f7f7f5}*{box-sizing:border-box}body{margin:0}.container{max-width:820px;margin:auto;padding:22px 16px 70px}header{padding:18px 0 12px}.eyebrow{font-size:.72rem;letter-spacing:.14em;color:#777;font-weight:700}h1{font-size:2rem;line-height:1.1;margin:7px 0}.header p{margin:5px 0;color:#666}.stats{display:flex;gap:7px;margin-top:15px;flex-wrap:wrap}.stats span{background:#fff;border:1px solid #ddd;border-radius:999px;padding:5px 10px;font-size:.78rem}.periods,.days,.filters,.price-tabs{display:flex;gap:7px;align-items:center}.periods{padding:8px 0}.days{overflow:auto;padding:5px 0 14px}.periods button,.days button,.price-tabs button{border:1px solid #ccc;background:#fff;border-radius:8px;padding:8px 11px;white-space:nowrap;cursor:pointer}.periods button:hover,.days button:hover,.price-tabs button:hover,.active{background:#171717!important;color:#fff;border-color:#171717!important}.controls{background:#fff;border:1px solid #ddd;border-radius:12px;padding:12px;margin-bottom:15px}.controls input{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem}.filters{margin-top:9px;justify-content:space-between}.filters select{padding:9px;border:1px solid #ccc;border-radius:8px;max-width:55%}.price-tabs{overflow:auto}.price-tabs button{padding:7px 9px}.result-head{display:flex;justify-content:space-between;align-items:center}.result-head h2{font-size:1rem;margin:12px 0}.clear{border:0;background:none;text-decoration:underline;cursor:pointer;color:#666}.event{display:grid;grid-template-columns:100px 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid #e0e0dc;border-radius:10px;padding:14px;margin:8px 0}.event time{font-size:.82rem;color:#666}.event h3{font-size:1rem;margin:0 0 5px}.event p{margin:0}.venue{color:#555;font-size:.88rem}.artists{color:#777;font-size:.8rem;margin:5px 0!important;line-height:1.45}.event strong{font-size:.85rem}.event a{color:#171717;text-decoration:none;border:1px solid #ccc;border-radius:7px;padding:7px 9px;white-space:nowrap}.empty{background:#fff;border:1px dashed #ccc;border-radius:10px;padding:30px;text-align:center;color:#666}.empty p{margin-bottom:0}.video-section{margin-top:28px}.video-note{margin:2px 0 0;color:#777;font-size:.8rem}.video-all{color:#171717;text-decoration:none;border:1px solid #ccc;border-radius:7px;padding:7px 9px;white-space:nowrap}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}.video-card{display:grid;grid-template-columns:32px 1fr auto;gap:9px;align-items:center;background:#fff;border:1px solid #e0e0dc;border-radius:10px;padding:11px}.video-card h3{font-size:.9rem;margin:0 0 3px}.video-card p{margin:0;color:#777;font-size:.72rem}.video-index{font-size:.72rem;color:#999;font-variant-numeric:tabular-nums}.video-card a{font-size:.75rem;color:#171717;text-decoration:none;border:1px solid #ccc;border-radius:7px;padding:6px 7px;white-space:nowrap}footer{margin-top:30px;color:#888;font-size:.72rem;line-height:1.6}@media(max-width:600px){.video-grid{grid-template-columns:1fr}.event{grid-template-columns:65px 1fr}.event a{grid-column:2;width:max-content}.event time{font-size:.72rem}.filters{align-items:flex-start;flex-direction:column}.filters select{max-width:100%;width:100%}.price-tabs{width:100%}h1{font-size:1.7rem}}
 </style>
