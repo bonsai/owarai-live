@@ -7,6 +7,8 @@
 - `assets.json`: Provider / Venue / Event / Organizer 等のAsset DB
 - `venue.jsonl`: Venue seed / observed venue DB
 - `comedians.jsonl`: 芸人・出演者Asset DB
+- `relations.jsonl`: Event ↔ Venue / Provider 等のRelationエッジ
+- `validation.json`: 正規化・Relation接続の検証結果
 - `agent-memory.jsonl`: 検索Agentの記憶
 - `search-policy.json`: 検索・公開ポリシー
 
