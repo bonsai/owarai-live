@@ -39,5 +39,5 @@
     "公式主催者"
   ],
   "preserve_seed": true,
-  "historical_seed": ".data/events.json"
+  "historical_seed": "data/events.json"
 }
