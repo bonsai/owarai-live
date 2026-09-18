@@ -10,11 +10,11 @@
 | 分類 | ファイル | 状態 |
 |------|----------|------|
 | イベント（週次） | `weekly/YYYY-MM-DD.json` | 日別フラット配列。open/start/price の簡易スキーマ。一部イベントは記述スキーマ混在 |
-| イベント（過去DB/シード） | `.data/events.json` | 正規化済みEvent配列（JSON文字列ラッパーなし） |
-| Asset 軽量版 | `.data/assets.json` | provider×3（tiget/fany/confetti）+ venue 数件。id/type/name/url/capabilities/genres 形式 |
-| 会場シード | `.data/venue-seeds.json` | 下北GRIP・新宿末廣亭・国立演芸場など。seed:true、一部住所/URL未確定 |
-| 大規模会場 | `.data/assets.json` | Venue Complex → Venue/Hall を含む正規化Asset |
-| 演者・イベント行 | `.data/comedians.jsonl` / `.data/events-*.jsonl` | 演者・イベントの行データ |
+| イベント（過去DB/シード） | `data/events.json` | 正規化済みEvent配列（JSON文字列ラッパーなし） |
+| Asset 軽量版 | `data/assets.json` | provider×3（tiget/fany/confetti）+ venue 数件。id/type/name/url/capabilities/genres 形式 |
+| 会場シード | `data/venue-seeds.json` | 下北GRIP・新宿末廣亭・国立演芸場など。seed:true、一部住所/URL未確定 |
+| 大規模会場 | `data/assets.json` | Venue Complex → Venue/Hall を含む正規化Asset |
+| 演者・イベント行 | `data/comedians.jsonl` / `data/events-*.jsonl` | 演者・イベントの行データ |
 | 収集 | `src/web_discovery.py` / `scripts/search_agent.py` | 自動ディスカバリ。9/12-17 に **6回連続失敗**（修正済み a3b2542） |
 | 正規化 | `src/ontology.py` | Event スキーマ + `price_kind`（free/under_500/under_1000/paid/unknown） |
 | 検索 | `src/search_graph.py` / `src/semantic_search.py` | グラフ・セマンティック検索の土台 |
@@ -116,7 +116,7 @@ yose-db の `ontology.yaml` と同型。classes / properties / relations / patte
 ④ Asset 化           venue/organizer/performer/event_series を id 規約で分離作成
 ⑤ Verify             Ticket price_yen を公式から確認 → confidence=source_confirmed
 ⑥ Relate             エッジ生成（held_at/sold_by/organized_by/appears_in）
-⑦ Persist            weekly/・.data/ へ確定（履歴は消さず Seed 保持）
+⑦ Persist            data/weekly/・data/ へ確定（履歴は消さず Seed 保持）
 ⑧ Query / Deliver    search_graph で Relation 検索 → App.vue / API / stage-search
 ```
 
