@@ -18,7 +18,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("live-date")
 
 SOURCES = {
-    "owarai": "https://raw.githubusercontent.com/bonsai/owarai-live/main/.data/events.json",
+    "owarai": "https://raw.githubusercontent.com/bonsai/owarai-live/main/data/events.json",
     "dj": "https://raw.githubusercontent.com/bonsai/dj-event/main/data/events.jsonl",
 }
 
