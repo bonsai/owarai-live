@@ -4,8 +4,20 @@
     "type": "provider",
     "name": "TIGET",
     "url": "https://tiget.net/",
-    "capabilities": ["event_search", "ticket_purchase", "ticket_reservation", "event_detail"],
-    "genres": ["お笑い", "寄席", "音楽", "アイドル", "演劇", "トークショー"],
+    "capabilities": [
+      "event_search",
+      "ticket_purchase",
+      "ticket_reservation",
+      "event_detail"
+    ],
+    "genres": [
+      "お笑い",
+      "寄席",
+      "音楽",
+      "アイドル",
+      "演劇",
+      "トークショー"
+    ],
     "role": "discovery_provider",
     "confidence": "official"
   },
@@ -14,7 +26,10 @@
     "type": "provider",
     "name": "FANY",
     "url": "https://ticket.fany.lol/",
-    "capabilities": ["event_search", "ticket_purchase"],
+    "capabilities": [
+      "event_search",
+      "ticket_purchase"
+    ],
     "role": "discovery_provider"
   },
   {
@@ -22,7 +37,10 @@
     "type": "provider",
     "name": "カンフェティ",
     "url": "https://www.confetti-web.com/",
-    "capabilities": ["event_search", "ticket_purchase"],
+    "capabilities": [
+      "event_search",
+      "ticket_purchase"
+    ],
     "role": "discovery_provider"
   },
   {
@@ -30,24 +48,40 @@
     "type": "venue",
     "name": "新宿末廣亭",
     "url": "https://suehirotei.com/",
-    "genres": ["寄席", "落語", "講談", "浪曲"],
+    "genres": [
+      "寄席",
+      "落語",
+      "講談",
+      "浪曲"
+    ],
     "role": "discovery_hub"
   },
   {
     "id": "venue:makuhari-messe:international-exhibition-halls-7-8",
     "type": "venue",
     "name": "幕張メッセ 国際展示場 7-8ホール",
-    "aliases": ["幕張メッセ 7-8ホール", "Makuhari Messe International Exhibition Halls 7-8"],
+    "aliases": [
+      "幕張メッセ 7-8ホール",
+      "Makuhari Messe International Exhibition Halls 7-8"
+    ],
     "location": {
       "prefecture": "千葉県",
       "city": "千葉市美浜区",
       "venue_complex": "幕張メッセ"
     },
     "venue_complex_id": "venue_complex:makuhari-messe",
-    "hall_ids": ["hall:makuhari-messe:7", "hall:makuhari-messe:8"],
+    "hall_ids": [
+      "hall:makuhari-messe:7",
+      "hall:makuhari-messe:8"
+    ],
     "scale": "large",
     "facility_type": "convention_exhibition_center",
-    "genres": ["アイドル", "音楽", "フェス", "大型イベント"],
+    "genres": [
+      "アイドル",
+      "音楽",
+      "フェス",
+      "大型イベント"
+    ],
     "role": "large_event_venue",
     "source": {
       "provider_id": "provider:tiget",
@@ -89,13 +123,30 @@
     "provider_id": "provider:tiget",
     "organizer": "株式会社GALDir Media",
     "source_url": "https://tiget.net/events/522619",
-    "genre": ["アイドル", "音楽", "フェス"],
-    "ticket_prices": [3900, 9800, 22000],
+    "genre": [
+      "アイドル",
+      "音楽",
+      "フェス"
+    ],
+    "ticket_prices": [
+      3900,
+      9800,
+      22000
+    ],
     "currency": "JPY",
     "relations": [
-      {"type": "held_at", "target": "venue:makuhari-messe:international-exhibition-halls-7-8"},
-      {"type": "sold_by", "target": "provider:tiget"},
-      {"type": "organized_by", "target": "org:galdir-media"}
+      {
+        "type": "held_at",
+        "target": "venue:makuhari-messe:international-exhibition-halls-7-8"
+      },
+      {
+        "type": "sold_by",
+        "target": "provider:tiget"
+      },
+      {
+        "type": "organized_by",
+        "target": "org:galdir-media"
+      }
     ],
     "confidence": "official_source"
   },
@@ -105,5 +156,133 @@
     "name": "株式会社GALDir Media",
     "source_url": "https://tiget.net/users/1530944/event_calendar",
     "role": "event_organizer"
+  },
+  {
+    "id": "venue_complex:tokyo-dome",
+    "type": "venue_complex",
+    "name": "東京ドーム",
+    "aliases": [],
+    "attributes": {
+      "city": "文京区",
+      "prefecture": "東京都",
+      "country": "日本",
+      "scale": "large",
+      "venue_class": "dome"
+    },
+    "relations": [],
+    "sources": [],
+    "confidence": "seed"
+  },
+  {
+    "id": "venue_complex:kyocera-dome-osaka",
+    "type": "venue_complex",
+    "name": "京セラドーム大阪",
+    "aliases": [],
+    "attributes": {
+      "city": "大阪市",
+      "prefecture": "大阪府",
+      "country": "日本",
+      "scale": "large",
+      "venue_class": "dome"
+    },
+    "relations": [],
+    "sources": [],
+    "confidence": "seed"
+  },
+  {
+    "id": "venue_complex:paypay-dome",
+    "type": "venue_complex",
+    "name": "みずほPayPayドーム福岡",
+    "aliases": [],
+    "attributes": {
+      "city": "福岡市",
+      "prefecture": "福岡県",
+      "country": "日本",
+      "scale": "large",
+      "venue_class": "dome"
+    },
+    "relations": [],
+    "sources": [],
+    "confidence": "seed"
+  },
+  {
+    "id": "venue_complex:vanterin-dome-nagoya",
+    "type": "venue_complex",
+    "name": "バンテリンドーム ナゴヤ",
+    "aliases": [],
+    "attributes": {
+      "city": "名古屋市",
+      "prefecture": "愛知県",
+      "country": "日本",
+      "scale": "large",
+      "venue_class": "dome"
+    },
+    "relations": [],
+    "sources": [],
+    "confidence": "seed"
+  },
+  {
+    "id": "venue_complex:es-con-field-hokkaido",
+    "type": "venue_complex",
+    "name": "エスコンフィールドHOKKAIDO",
+    "aliases": [],
+    "attributes": {
+      "city": "北広島市",
+      "prefecture": "北海道",
+      "country": "日本",
+      "scale": "large",
+      "venue_class": "dome"
+    },
+    "relations": [],
+    "sources": [],
+    "confidence": "seed"
+  },
+  {
+    "id": "venue:makuhari-messe-hall-7",
+    "type": "venue",
+    "name": "幕張メッセ 国際展示場 7ホール",
+    "aliases": [],
+    "attributes": {
+      "city": "千葉市",
+      "prefecture": "千葉県",
+      "country": "日本",
+      "scale": "large"
+    },
+    "relations": [
+      {
+        "type": "part_of",
+        "target": "venue_complex:makuhari-messe"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/522619"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "venue:makuhari-messe-hall-8",
+    "type": "venue",
+    "name": "幕張メッセ 国際展示場 8ホール",
+    "aliases": [],
+    "attributes": {
+      "city": "千葉市",
+      "prefecture": "千葉県",
+      "country": "日本",
+      "scale": "large"
+    },
+    "relations": [
+      {
+        "type": "part_of",
+        "target": "venue_complex:makuhari-messe"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/522619"
+      }
+    ],
+    "confidence": "source_confirmed"
   }
 ]
