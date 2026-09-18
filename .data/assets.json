@@ -492,5 +492,712 @@
       }
     ],
     "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-12-wonderwave-small",
+    "type": "event",
+    "name": "Wonderwaveお笑いライブVol.79〜小波〜",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-12",
+      "start_at": "12:30",
+      "venue_name": "シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "クマドリネオン",
+        "シロハタ",
+        "ねこじゃらし",
+        "デッサンズ",
+        "プーケットマーケット",
+        "天国ヘブン",
+        "響",
+        "伊藤たける"
+      ],
+      "price": "500円",
+      "note": "会場席500円・当日支払い。9/12 12:15開場 / 12:30開演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/513536",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:tiget-515484",
+    "type": "event",
+    "name": "無料ライブ パワーオブフリー(Ｓ) vol.千48",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-12",
+      "start_at": "12:30",
+      "venue_name": "新宿バッシュ!!",
+      "area": "新宿",
+      "artists": [],
+      "price": "無料",
+      "note": "U&Cエンタプライズ主催。3分ショートネタライブ。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x65b0x5bbfx30d0x30c3x30b7x30e5x21x21"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/515484",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-12-wonderwave-mid",
+    "type": "event",
+    "name": "Wonderwaveお笑いライブVol.79〜中波〜",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-12",
+      "start_at": "15:00",
+      "venue_name": "シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "プーケットマーケット",
+        "シェパーズ",
+        "しおさい",
+        "にこさ",
+        "さんぽ",
+        "愛のゼブラ"
+      ],
+      "price": "1,000円",
+      "note": "会場席1,000円・当日支払い。9/12 14:45開場 / 15:00開演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/513536",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-12-wonderwave-large",
+    "type": "event",
+    "name": "Wonderwaveお笑いライブVol.79〜大波〜",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-12",
+      "start_at": "18:30",
+      "venue_name": "シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "クマドリネオン",
+        "劇的トライアングル",
+        "甘味処",
+        "響",
+        "キョウシツノスミ",
+        "マツオペラ",
+        "プーケットマーケット",
+        "シロハタ",
+        "ねこじゃらし",
+        "デッサンズ"
+      ],
+      "price": "1,500円",
+      "note": "会場席1,500円・当日支払い。9/12 18:00開場 / 18:30開演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/513536",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-13-minerva-cd5",
+    "type": "event",
+    "name": "ミネルヴァモータースCD⑤",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-13",
+      "start_at": "12:00",
+      "venue_name": "下北沢シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "アクシデンタル",
+        "あぶく",
+        "いずみちゃん",
+        "オリエント",
+        "キングマン",
+        "サボテンズ",
+        "シャーピン",
+        "トロフィーマングー"
+      ],
+      "price": "料金要確認",
+      "note": "出演者多数。独立公演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x4e0bx5317x6ca2x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://hashigo-live.com/live_event/?event_area=%E4%B8%8B%E5%8C%97%E6%B2%A2&event_date=2026-09-13",
+        "provider": "ライブ情報サイト"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-13-minerva-cd6",
+    "type": "event",
+    "name": "ミネルヴァモータースCD⑥",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-13",
+      "start_at": "15:30",
+      "venue_name": "下北沢シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "オスマ",
+        "キャニオンコープ",
+        "シイナ",
+        "しらすのこうげき！",
+        "たわし",
+        "タンドウビ",
+        "デカアパート",
+        "ドラマチック安村"
+      ],
+      "price": "料金要確認",
+      "note": "出演者多数。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x4e0bx5317x6ca2x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://hashigo-live.com/live_event/?event_area=%E4%B8%8B%E5%8C%97%E6%B2%A2&event_date=2026-09-13",
+        "provider": "ライブ情報サイト"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-13-minerva-a2",
+    "type": "event",
+    "name": "ミネルヴァモータースA②",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-13",
+      "start_at": "19:00",
+      "venue_name": "下北沢シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "6年黄組",
+        "DNA宇宙連合",
+        "コイオドリ",
+        "シャンソン姉さん",
+        "ストレッチーズ",
+        "ソルトレイク",
+        "チュランペット",
+        "ツータロウ"
+      ],
+      "price": "料金要確認",
+      "note": "夜公演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x4e0bx5317x6ca2x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://hashigo-live.com/live_event/?event_area=%E4%B8%8B%E5%8C%97%E6%B2%A2&event_date=2026-09-13",
+        "provider": "ライブ情報サイト"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-13-jimbocho",
+    "type": "event",
+    "name": "神保町マンゲキお笑いライブ",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-13",
+      "start_at": "15:00",
+      "venue_name": "神保町よしもと漫才劇場",
+      "area": "神保町",
+      "artists": [
+        "ダンビラムーチョ",
+        "ヨネダ2000",
+        "キンボシ",
+        "まんじろう",
+        "ケビンス",
+        "そいつどいつ",
+        "ミカボ",
+        "太鵬",
+        "軟水",
+        "伝書鳩",
+        "とりせん"
+      ],
+      "price": "料金要確認",
+      "note": "ネタ＆コーナー系。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x795ex4fddx753ax3088x3057x3082x3068x6f2bx624dx5287x5834"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/artist/%E3%81%9D%E3%81%84%E3%81%A4%E3%81%A9%E3%81%84%E3%81%A4",
+        "provider": "お笑いライブ検索"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-18-free-entry-breacker",
+    "type": "event",
+    "name": "みんなのお笑いライブ新宿ブリーカー",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-18",
+      "start_at": "14:00",
+      "venue_name": "新宿ブリーカー",
+      "area": "新宿",
+      "artists": [
+        "キャモン西本",
+        "孫ダッシュ",
+        "とっ法螺",
+        "ピンセット",
+        "イッペー"
+      ],
+      "price": "無料",
+      "note": "フリーエントリーお笑いネタライブ。入場無料・当日支払いなし。出演者宛てのお捻り可。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x65b0x5bbfx30d6x30eax30fcx30abx30fc"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/518028",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-22-shinjuku-bash-power-free-s-vol1000plus",
+    "type": "event",
+    "name": "パワーオブフリー(Ｓ) vol.千52",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-22",
+      "start_at": "12:30",
+      "venue_name": "新宿バッシュ!!",
+      "area": "新宿",
+      "artists": [],
+      "price": "無料",
+      "note": "9/22 12:25開場 / 12:30開演。入場無料。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x65b0x5bbfx30d0x30c3x30b7x30e5x21x21"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/520050",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-25-itabashi-manwaka",
+    "type": "event",
+    "name": "無印×築笑会合同ライブ『マンワカ』",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-25",
+      "start_at": "19:00",
+      "venue_name": "板橋シアター咲",
+      "area": "板橋",
+      "artists": [],
+      "price": "無料",
+      "note": "9/25 18:45開場 / 19:00開演。学生お笑いサークル合同ライブ。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x677fx6a4bx30b7x30a2x30bfx30fcx54b2"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/516440",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-29-shinjuku-bash-minna",
+    "type": "event",
+    "name": "みんなのお笑いライブ新宿バッシュ",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-29",
+      "start_at": "14:00",
+      "venue_name": "新宿バッシュ!!",
+      "area": "新宿",
+      "artists": [],
+      "price": "無料",
+      "note": "9/29 13:50開場 / 14:00開演。入場無料。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x65b0x5bbfx30d0x30c3x30b7x30e5x21x21"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/518036",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-10-09-nakanozero-manzai",
+    "type": "event",
+    "name": "超マンザイザンマイ",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-10-09",
+      "start_at": "19:00",
+      "venue_name": "なかのZERO 本館地下2階 視聴覚ホール",
+      "area": "中野",
+      "artists": [
+        "ハナイチゴコンプライアンス小松崎"
+      ],
+      "price": "無料",
+      "note": "9/10 18:50開場 / 19:00開演。総勢30組出演の漫才ライブ。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x306ax304bx306eZEROx20x672cx9928x5730x4e0b2x968ex20x8996x8074x899ax30dbx30fcx30e"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/516815",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-10-21-itabashi-bell",
+    "type": "event",
+    "name": "ショートネタライブ『ベル』",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-10-21",
+      "start_at": "19:30",
+      "venue_name": "板橋シアター咲",
+      "area": "板橋",
+      "artists": [
+        "スーパー弾力素材にーくん"
+      ],
+      "price": "無料",
+      "note": "9/10 19:15開場 / 19:30開演。入場無料。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x677fx6a4bx30b7x30a2x30bfx30fcx54b2"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/522426",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-13-nakano-geino-power-free-s",
+    "type": "event",
+    "name": "パワーオブフリー(Ｓ) vol.千49",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-13",
+      "start_at": "19:00",
+      "venue_name": "なかの芸能小劇場",
+      "area": "中野",
+      "artists": [],
+      "price": "無料",
+      "note": "9/13 18:55開場 / 19:00開演。入場無料。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x306ax304bx306ex82b8x80fdx5c0fx5287x5834"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/515486",
+        "provider": "TIGET"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-18-ohnabe",
+    "type": "event",
+    "name": "お笑いライブ『OHNABE』",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-18",
+      "start_at": null,
+      "venue_name": "東京都",
+      "area": "東京",
+      "artists": [
+        "怪力",
+        "DNA宇宙連合",
+        "東西龍太・虎太",
+        "スリーフ..."
+      ],
+      "price": "料金要確認",
+      "note": "検索エージェントの候補。詳細は公式チケットで再確認する。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x6771x4eacx90fd"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/",
+        "provider": "お笑いライブ検索"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-18-shinjuku",
+    "type": "event",
+    "name": "スタミナパン新宿21時半倶楽部",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-18",
+      "start_at": null,
+      "venue_name": "新宿",
+      "area": "新宿",
+      "artists": [
+        "スタミナパン",
+        "カラタチ",
+        "チュランペット",
+        "源川"
+      ],
+      "price": "料金要確認",
+      "note": "検索エージェントの候補。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x65b0x5bbf"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/",
+        "provider": "お笑いライブ検索"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-18-lumine",
+    "type": "event",
+    "name": "ルミネtheよしもと 平日14時の部 プラス",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-18",
+      "start_at": "14:00",
+      "venue_name": "ルミネtheよしもと",
+      "area": "新宿",
+      "artists": [
+        "霜降り明星",
+        "ダイノジ",
+        "佐久間一行",
+        "ダイアン",
+        "囲碁将棋",
+        "フルーツポンチ",
+        "うるとらブギーズ",
+        "パンサー",
+        "相席スタート"
+      ],
+      "price": "料金要確認",
+      "note": "大型公演。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x30ebx30dfx30cdthex3088x3057x3082x3068"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://owarai-live.com/",
+        "provider": "お笑いライブ検索"
+      }
+    ],
+    "confidence": "candidate"
+  },
+  {
+    "id": "event:2026-09-25-cowcow",
+    "type": "event",
+    "name": "COWCOW TALK LIVE『下北沢の怪しい集まり』",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-25",
+      "start_at": "19:30",
+      "venue_name": "下北沢シアターミネルヴァ",
+      "area": "下北沢",
+      "artists": [
+        "COWCOW"
+      ],
+      "price": "前売1,500円 / 当日2,000円",
+      "note": "よしもと公式。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x4e0bx5317x6ca2x30b7x30a2x30bfx30fcx30dfx30cdx30ebx30f4x30a1"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://live.yoshimoto.co.jp/live/live-16215/",
+        "provider": "公式"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-30-hiphop",
+    "type": "event",
+    "name": "若手芸人HIPHOP同好会 2026年9月号",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-30",
+      "start_at": "19:00",
+      "venue_name": "下北沢ろくでもない夜",
+      "area": "下北沢",
+      "artists": [
+        "つるまる",
+        "吉野おいなり君",
+        "ポイント",
+        "King Boy",
+        "八木崇",
+        "なんぶ"
+      ],
+      "price": "料金要確認",
+      "note": "ショーケース＋トークの2部構成。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x4e0bx5317x6ca2x308dx304fx3067x3082x306ax3044x591c"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://ticket.fany.lol/event/detail/19642",
+        "provider": "FANY"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "event:2026-09-19-shimokita-caravan",
+    "type": "event",
+    "name": "9/19(土)ワンコイン30分お笑いライブ「シモキタキャラバン」",
+    "aliases": [],
+    "attributes": {
+      "date": "2026-09-19",
+      "start_at": "13:45",
+      "venue_name": "サンガイノリバティ",
+      "area": "下北沢",
+      "artists": [
+        "しだん家",
+        "ドミニオン",
+        "バリービスタ",
+        "ガンガンヒーロー",
+        "ラクジャ",
+        "ベンジャミン",
+        "りとるハイ",
+        "ラクイチラクザ",
+        "マツリ",
+        "捕芸",
+        "高速ぷりん",
+        "大菩薩峠",
+        "こーたくん"
+      ],
+      "price": "500円",
+      "note": "13:35開場。30分公演を5枠（13:45-14:15 / 14:55-15:25 / 16:05-16:35 / 17:15-17:45 / 18:25-18:55）。当日現金、来場順自由席。捕芸は①のみ。出演者・時間変更の可能性あり。"
+    },
+    "relations": [
+      {
+        "type": "held_at",
+        "target": "venue:x30b5x30f3x30acx30a4x30cex30eax30d0x30c6x30a3"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/518658",
+        "provider": "TIGET公式"
+      }
+    ],
+    "confidence": "source_confirmed"
   }
 ]
