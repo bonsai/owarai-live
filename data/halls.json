@@ -1,0 +1,46 @@
+[
+  {
+    "id": "venue:makuhari-messe-hall-7",
+    "type": "venue",
+    "name": "幕張メッセ 国際展示場 7ホール",
+    "attributes": {
+      "city": "千葉市",
+      "prefecture": "千葉県",
+      "scale": "large"
+    },
+    "relations": [
+      {
+        "type": "part_of",
+        "target": "venue_complex:makuhari-messe"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/522619"
+      }
+    ],
+    "confidence": "source_confirmed"
+  },
+  {
+    "id": "venue:makuhari-messe-hall-8",
+    "type": "venue",
+    "name": "幕張メッセ 国際展示場 8ホール",
+    "attributes": {
+      "city": "千葉市",
+      "prefecture": "千葉県",
+      "scale": "large"
+    },
+    "relations": [
+      {
+        "type": "part_of",
+        "target": "venue_complex:makuhari-messe"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://tiget.net/events/522619"
+      }
+    ],
+    "confidence": "source_confirmed"
+  }
+]
