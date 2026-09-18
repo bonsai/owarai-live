@@ -10,11 +10,11 @@
 | 分類 | ファイル | 状態 |
 |------|----------|------|
 | イベント（週次） | `weekly/YYYY-MM-DD.json` | 日別フラット配列。open/start/price の簡易スキーマ。一部イベントは記述スキーマ混在 |
-| イベント（過去DB/シード） | `.data/events.json` | `{content:"配列文字列"}` ラッパー。イベント埋め込み式（会場・演者も文字列保持） |
+| イベント（過去DB/シード） | `.data/events.json` | 正規化済みEvent配列（JSON文字列ラッパーなし） |
 | Asset 軽量版 | `.data/assets.json` | provider×3（tiget/fany/confetti）+ venue 数件。id/type/name/url/capabilities/genres 形式 |
 | 会場シード | `.data/venue-seeds.json` | 下北GRIP・新宿末廣亭・国立演芸場など。seed:true、一部住所/URL未確定 |
-| 大規模会場 | `domes.json` / `halls.json` | Venue Complex → Hall 階層の構造定義 |
-| 演者・イベント行 | `data/comedians.jsonl` / `*.jsonl` | 演者・イベントの行データ |
+| 大規模会場 | `.data/assets.json` | Venue Complex → Venue/Hall を含む正規化Asset |
+| 演者・イベント行 | `.data/comedians.jsonl` / `.data/events-*.jsonl` | 演者・イベントの行データ |
 | 収集 | `src/web_discovery.py` / `scripts/search_agent.py` | 自動ディスカバリ。9/12-17 に **6回連続失敗**（修正済み a3b2542） |
 | 正規化 | `src/ontology.py` | Event スキーマ + `price_kind`（free/under_500/under_1000/paid/unknown） |
 | 検索 | `src/search_graph.py` / `src/semantic_search.py` | グラフ・セマンティック検索の土台 |
@@ -22,7 +22,7 @@
 
 **課題**
 1. イベントDBはフラット。会場・演者・主催者が **Asset 化されていない**（Relation 未配線）
-2. `assets.json` / `venue-seeds.json` / `domes.json` / `halls.json` が **別々に存在し統合されていない**
+2. `assets.json` に Provider / Venue Complex / Venue / Hall を統合済み。`relations.jsonl` でEvent→Venue/Providerを接続。
 3. 定常開催（下北GRIP 毎日3部制）を個別イベントとして手動登録している（recurring 化されていない）
 4. 価格不明ソース（はしご等）は FIND 専用だが運用ルール未明文化
 5. confidence が「確認済み/要確認」の2値。シードと候補の区別が DB 上不明瞭
@@ -145,7 +145,7 @@ yose-db の `ontology.yaml` と同型。classes / properties / relations / patte
 | Phase | 内容 | 完了基準 |
 |-------|------|----------|
 | **P0 運用復旧** | search-agent の PASS 確認・失敗通知・週次スナップショット | 7日連続 PASS、表示33件維持 |
-| **P1 正規化** | `events.json` を素の配列化 + Event Asset 統一スキーマ。`assets.json`/`venue-seeds.json`/`domes.json`/`halls.json` を `schema.json` に統合 | 全イベントが schema 準拠、venue Asset が一覧として検索可能 |
+| **P1 正規化** | `events.json` を素の配列化 + Event Asset 統一スキーマ。`assets.json`/`venue-seeds.json`/`domes.json`/`halls.json` を `schema.json` に統合 | 全イベントが正規化配列、venue Asset が一覧として検索可能、RelationでEvent→Venue/Providerを接続 |
 | **P2 関係配線** | Relation エッジ生成（held_at/sold_by/organized_by/appears_in）+ dedupe 強化 | 全イベントが venue/provider へエッジ接続、同一イベント重複ゼロ |
 | **P3 意味検索** | search_graph で「会場×過去イベント」「プロバイダ×無料」等の Relation 検索、価格帯ファセット | UI/API からグラフ探索が可能 |
 | **P4 定常展開** | recurring.yaml で下北GRIP 等を毎日自動展開。Series Asset を先行作成 | 週あたり表示件数が現行比 +30%以上 |
