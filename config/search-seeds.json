@@ -2,7 +2,7 @@
   "version": 1,
   "purpose": "Discovery seeds. Existing historical DB is preserved and referenced as a seed source; it is never deleted or overwritten by discovery.",
   "legacy_db": {
-    "path": ".data/events.json",
+    "path": "data/events.json",
     "role": "seed",
     "preserve": true
   },
